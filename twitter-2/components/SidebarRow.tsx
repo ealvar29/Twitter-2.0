@@ -12,7 +12,9 @@ function SidebarRow({ Icon, title }: Props) {
     transitio duration-200 group max-w-fit"
     >
       <Icon className="h-6 w-6" />
-      <p className="group-hover:text-twitter">{title}</p>
+      <p className="group-hover:text-twitter hidden md:inline-flex text-base font-light lg:text-xl">
+        {title}
+      </p>
     </div>
   );
 }
