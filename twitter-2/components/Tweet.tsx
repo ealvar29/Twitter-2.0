@@ -5,8 +5,20 @@ interface Props {
   tweet: Tweet;
 }
 
-function Tweet(props: Props) {
-  return <div>Tweet</div>;
+function Tweet({ tweet }: Props) {
+  return (
+    <div>
+      <div>
+        <img src={tweet.profileImg} alt="" />
+        <div>
+          <div>
+            <p>{tweet.username}</p>
+            <p>@{tweet.username.replace(/\s+/g, "").toLowerCase()}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Tweet;
